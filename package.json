@@ -1,24 +1,21 @@
 {
   "name": "promptology",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.10",
+  "description": "Install promptology files for development guidance",
+  "main": "index.js",
+  "bin": {
+    "promptology": "./bin/promptology-setup.js",
+    "promptology-setup": "./bin/promptology-setup.js"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "postinstall": "node ./bin/promptology-setup.js"
   },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.9"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
-  }
+  "keywords": ["prompt", "development", "guidelines"],
+  "author": "Aaron Sim",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "templates",
+    "index.js"
+  ]
 }

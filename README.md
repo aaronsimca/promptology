@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Promptology –Cursor AI Composer
 
-## Getting Started
+This package is designed for use with the Cursor IDE, enhancing your AI-assisted coding experience.
 
-First, run the development server:
+## Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install promptology
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+After installation, you need to run a setup command to create the necessary files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npx promptology-setup
+```
 
-## Learn More
+This will create the following structure in your project:
 
-To learn more about Next.js, take a look at the following resources:
+```
+your-project/
+└── prompt/
+    ├── Frontend.md
+    ├── Backend.md
+    └── Main.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can then use the following commands in your Cursor IDE:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `@Codebase`: Points to the entire codebase
+- `@Main.md`: References the main documentation file
+- `@Frontend.md`: Directs to frontend-specific documentation
+- `@Backend.md`: Indicates backend-related documentation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Modify the .md files in the prompt folder to fit your project.
